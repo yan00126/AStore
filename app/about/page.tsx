@@ -1,4 +1,5 @@
 import db from "@/utils/db";
+import { log } from "console";
 
 async function AboutPage() {
   const profile = await db.testProfile.create({
@@ -8,6 +9,7 @@ async function AboutPage() {
   });
 
   const users = await db.testProfile.findMany();
+  console.log(profile);
 
   return (
     <div>
