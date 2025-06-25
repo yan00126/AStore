@@ -1,4 +1,4 @@
-function ProductList() {
+function ProductsList() {
   return <div>ProductList</div>;
 }
-export default ProductList;
+export default ProductsList;
