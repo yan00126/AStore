@@ -1,6 +1,7 @@
 import { FaStar } from "react-icons/fa";
 
 function ProductRating({ productId }: { productId: string }) {
+  console.log(`Toggling favorite for product ${productId}`);
   const rating = 4.8;
   const count = 25;
 
