@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { faker } from "@faker-js/faker";
+import { FormInput } from "lucide-react";
 const CreateProductAction = async (formData: FormData) => {
   "use server";
   const name = formData.get("name") as string;
@@ -18,8 +19,12 @@ function CreateProductPage() {
       <div className="border p-8 rounded-md">
         <form action={CreateProductAction}>
           <div className="mb-2">
-            <Label htmlFor="name">Product Name</Label>
-            <Input id="name" name="name" type="text" defaultValue={name} />
+            <FormInput
+              type="text"
+              name="name"
+              label="product name"
+              defaultvalue={name}
+            />
           </div>
           <Button type="submit" size="lg">
             Submit
